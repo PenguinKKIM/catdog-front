@@ -68,7 +68,7 @@ function DesGal() {
     }
 
     const initialGet = () => {
-        axios.get('http://localhost:8090/desgallery', {
+        axios.get(`${url}/desgallery`, {
             params: { page, size: PAGE_SIZE }
         })
         .then((res) => {
@@ -82,7 +82,7 @@ function DesGal() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8090/user', {
+        axios.get(`${url}/user`, {
             headers: { Authorization: token }
         })
         .then(res => console.log("Res: " + JSON.stringify(res.data)))

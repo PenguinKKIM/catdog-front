@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { wsUrl } from '../../config';
 
 
 
@@ -11,7 +12,7 @@ const WebSocketComponent = () => {
 
 
   useEffect(() => {
-    const socket = new WebSocket('ws://localhost:8090/ws');
+    const socket = new WebSocket(`${wsUrl}/ws`);
 
 
     socket.onopen = () => {

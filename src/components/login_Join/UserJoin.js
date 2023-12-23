@@ -444,7 +444,7 @@ function UserJoin() {
                                             {/** 카카오톡 로그인 */}
                                             <div className="main-btn kakao-login-btn"><i className="fas fa-comment" >
                                             </i>
-                                                <Link to="http://localhost:8090/oauth2/authorization/kakao">카카오 로그인</Link>
+                                                <Link to={`${url}/oauth2/authorization/kakao`}>카카오 로그인</Link>
                                             </div>
                                         </div>
 

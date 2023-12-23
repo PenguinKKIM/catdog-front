@@ -24,7 +24,7 @@ const Oauth = () => {
   useEffect(() => {
     // console.log("token:"+token);
     dispatch(setToken(token));
-    axios.get(`http://localhost:8090/user`, axiosConfig)
+    axios.get(`${url}/user`, axiosConfig)
       .then((res) => {
         // console.log(res);
         // console.log(res.data);

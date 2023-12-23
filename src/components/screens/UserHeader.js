@@ -5,6 +5,7 @@ import { setToken, logoutStore } from "../../actions";
 import Swal from "sweetalert2";
 import { persistor } from "../../App"
 import axios from 'axios';
+import { url } from "../../config";
 
 
 function UserHeader() {
@@ -43,7 +44,7 @@ function UserHeader() {
     
     useEffect(() => {
         if (user.roles === 'ROLE_DES' || user.roles === 'ROLE_SHOP') {
-            axios.get(`http://localhost:8090/desinfobyid?desId=${user.id}`)
+            axios.get(`${url}/desinfobyid?desId=${user.id}`)
                 .then((res) => {
                     console.log("header" + JSON.stringify(res.data.des.num));
                     dispatch({ type: 'SET_DES', payload: res.data.des });
